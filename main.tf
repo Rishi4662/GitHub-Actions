@@ -43,7 +43,7 @@ resource "aws_instance" "example_instance" {
   subnet_id     = aws_subnet.example_subnet.id
 
   tags = {
-    Name = "Terraform-instance"
+    Name = "Terraform-instances"
   }
 
   vpc_security_group_ids = [aws_security_group.example_security_group.id]
