@@ -29,11 +29,6 @@ jobs:
         id: plan
         if: github.event_name == 'push'
         run:  terraform plan -no-color
-        continue-on-error: true
-
-      - name: Terraform Plan Status
-        if: steps.plan.outcome == 'failure'
-        run:  exit 1
 
       - name: Terraform Apply 
         if: github.ref == 'refs/head/main' && github.event_name == 'push'
