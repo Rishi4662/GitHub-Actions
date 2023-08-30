@@ -31,6 +31,7 @@ resource "aws_subnet" "example_subnet" {
 
 resource "aws_security_group" "example_security_group" {
   name_prefix = "Terraform-"
+  vpc_id = aws_vpc.example_vpc.id
   
   ingress {
     from_port   = 22
